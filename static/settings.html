@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury" id="themer">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="log.png">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="./css/cursor.css" rel="stylesheet" type="text/css">
+        <link href=" ./css/full.css " rel="stylesheet " type="text/css " />
+        <link href=" ./css/scroll2.css " rel="stylesheet " type="text/css " id="scroller" />
+        <link href=" ./css/modern.min.css " rel="stylesheet " type="text/css " />
+        <script src="./js/tailwind.js "></script>
+        <script src="./js/winbox.bundle.js "></script>
+        <script src="./js/nodecursor.js "></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYJGLR7TYH"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-BYJGLR7TYH');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3030358519558965" crossorigin="anonymous"></script>
+        <title>Liquids</title>
+    </head>
+    <body>
+        <div id="dev">
+            <div class="navbar bg-base-100">
+                <header class="sticky top-0 z-50"></header>
+                <div class="node" id="node"></div>
+                <div class="cursor" id="cursor"></div>
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li>
+                                <a href="index.html">Proxy</a>
+                            </li>
+                            <li>
+                                <a href="apps.html">Apps</a>
+                            </li>
+                            <li>
+                                <a href="chatroom.html">Chat Room</a>
+                            </li>
+                            <li>
+                                <a href="creator.html">Creator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-center">
+                    <a href="index.html" class="btn btn-ghost normal-case text-xl ">Liquids</a>
+                </div>
+                <div class="navbar-end ">
+                </div>
+            </div>
+
+            <style>
+                .button-row {
+                    width: 9rem;
+                    padding: 0
+                }
+
+                .grid-container {
+                    display: grid;
+                    grid-template-areas: "button1 button2 button3"
+                                        "button4 button5 button5";
+                    grid-gap: 5px;
+                }
+
+                
+            </style>
+            <div class="hero min-h-screen bg-base-info">
+                <div class="hero-content text-center" >
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold  hover__btn nodeHover">Settings</h1>
+                        <p class="py-6 hover__btn nodeHover">This is the page where you can toggle on and off various optional features and quality of life improvements for Liquids.</p>
+                        <div class="divider">Theme</div>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">Theme Swapping</span>
+                                <input id="themeSwap" type="checkbox" class="toggle" unchecked onclick="themeSwap();">
+                            </label>
+                        </div>
+                        <br>
+                        <div class="flex flex-col space-y-4 ...">
+                            <div class="form-control">
+                                <div class="input-group2">
+                                    <button class="btn2" style="width: 350px;" onclick="setRandomTheme();">Random Theme</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="dropdown">
+                            <label tabindex="0" class="btn2" id="themeChange" style="width: 350px;">Change Theme</label>
+                            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 "
+                                style="width: 350px;">
+                                <div class="grid-container" id="menu">
+                                    <div class="grid-item" id="menuChild">
+                                        <li style="color: currentColor; background-color: hsl(var(--bc)/var(--tw-bg-opacity));">
+                                            <a style="text-align: center;" onclick="changeMenuTheme(0);">smack</a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                            <br>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="divider">URL Handling</div>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">About : Blank Cloaking</span>
+                                <input id="aboutBlankCloaking" type="checkbox" class="toggle" unchecked onclick="aboutBlankCloaking();">
+                            </label>
+                        </div>
+                        <div class="divider">Tab Cloaking</div>
+                        <div class="flex flex-col space-y-4 ...">
+                            <div class="form-control">
+                                <div class="input-group">
+                                    <input id="titleTab" type="text" placeholder="Tab Title" class="input w-full max-w-lg">
+                                    <button id="tabTitle" class="btn btn-square">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-control">
+                                <div class="input-group">
+                                    <input id="iconTab" type="text" placeholder="Tab Icon" class="input w-full max-w-lg">
+                                    <button id="tabIcon" class=" btn btn-square ">
+                                        <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-6 " fill="none " viewBox="0 0 24 24 " stroke="currentColor " stroke-width="2 ">
+                                            <path stroke-linecap="round " stroke-linejoin="round " d="M5 13l4 4L19 7 " />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="divider">Performance</div>
+                        <div class="form-control">
+                            <label class="label cursor-pointer">
+                                <span class="label-text">Mouse Cursor</span>
+                                <input id="nodeCursor" type="checkbox" class="toggle" unchecked onclick="nodeCursor();">
+                            </label>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var initCursor;
+                if (localStorage.getItem('nodeCursor') == 'true') {
+                    initCursor = new NodeCursor({
+                        cursor: true,
+                        node: true,
+                        cursor_velocity: 1,
+                        node_velocity: .35,
+                        native_cursor: 'none',
+                        element_to_hover: '.nodeHover',
+                        cursor_class_hover: 'disabled',
+                        node_class_hover: 'expand',
+                        hide_mode: true,
+                        hide_timing: 2000,
+                    });
+                }
+            </script>
+            <script src="./js/windowHandler.js "></script>
+            <script src="./js/darkmode.js "></script>
+            <script src="./js/settings.js "></script>
+        </div>
+    </body>
+</html>
