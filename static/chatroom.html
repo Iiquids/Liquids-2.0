@@ -12,6 +12,9 @@
     <link href=" ./css/full.css " rel="stylesheet " type="text/css " />
     <link href=" ./css/scroll2.css " rel="stylesheet " type="text/css " id="scroller" />
     <link href=" ./css/modern.min.css " rel="stylesheet " type="text/css " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/Chatroomstyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="./js/tailwind.js "></script>
     <script src="./js/winbox.bundle.js "></script>
     <script src="./js/nodecursor.js "></script>
@@ -130,14 +133,31 @@
             }
         </style>
 
-        <iframe sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" width="100%"
-            height="900" id="discordFrame" title="Discord"></iframe>
-
-        <script>
-            const url = __uv$config.prefix + __uv$config.encodeUrl("https://discord.com/widget?id=1099075852492349581&theme=dark");
-            const discordFrame = document.getElementById("discordFrame")
-            discordFrame.src = url;
-        </script>
+        <!-- partial:index.partial.html -->
+        <div class="wrapper">
+            <div class="setuser">
+                <p>Welcome! Please choose a username.</p>
+                <div class="wrapper">
+                    <input class="username" type="text" maxlength=20 placeholder="Enter a username"/><button>Confirm</button>
+                </div>
+            </div>
+            <div class="dim"></div>
+            <div class="chat">
+                <div class="reminder">Welcome! Remember to be kind to others&hellip;</div>
+                <div class="chatbox">
+                    <div class="messages-wrapper">
+                        <div class="status">Searching for a partner...</div>
+                    </div>
+                </div>
+                <div class="reply">
+                    <div class="typing"></div>
+                    <div class="wrapper">
+                        <input class="usermsg" type="text" placeholder="Say hello!" disabled/><button class="send">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="js/Chatroom.js"></script>
 
         <script src="./js/windowHandler.js "></script>
         <script src="./js/darkmode.js "></script>
